@@ -1,0 +1,642 @@
+
+/* =========================================================
+   KEMETIX BUSINESS OS
+   CREATE PROJECT — PREMIUM DARK DESIGN
+========================================================= */
+
+.create-project-page {
+  --cp-bg: #0c0c0d;
+  --cp-surface: #151516;
+  --cp-surface-light: #1b1b1d;
+  --cp-border: #2a2a2d;
+  --cp-gold: #c9a86a;
+  --cp-gold-light: #e2c58b;
+  --cp-text: #f3f3f3;
+  --cp-muted: #89898d;
+
+  width: 100%;
+  min-height: 100%;
+  padding: 32px;
+  color: var(--cp-text);
+  background: var(--cp-bg);
+  direction: rtl;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.create-project-page *,
+.create-project-page *::before,
+.create-project-page *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.create-project-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.create-project-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: #77777c;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.create-project-breadcrumb a {
+  color: var(--cp-gold);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.create-project-breadcrumb a:hover {
+  color: var(--cp-gold-light);
+}
+
+.create-project-breadcrumb span:last-child {
+  color: #b9b9bd;
+}
+
+.create-project-topbar h1 {
+  margin: 0;
+  color: #f5f5f5;
+  font-size: 28px;
+  font-weight: 750;
+  line-height: 1.5;
+  letter-spacing: -0.6px;
+}
+
+.create-project-topbar p {
+  margin: 8px 0 0;
+  color: var(--cp-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.create-project-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 0 16px;
+  color: #c8c8ca;
+  background: #181819;
+  border: 1px solid #333336;
+  border-radius: 9px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.create-project-back:hover {
+  color: var(--cp-gold-light);
+  background: #211e18;
+  border-color: #8f7548;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   FORM CONTAINER
+========================================================= */
+
+.create-project-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 0 0;
+}
+
+/* =========================================================
+   FORM SECTIONS
+========================================================= */
+
+.project-form-section {
+  position: relative;
+  overflow: hidden;
+  padding: 27px;
+  background: linear-gradient(
+    145deg,
+    #19191a 0%,
+    #141415 100%
+  );
+  border: 1px solid var(--cp-border);
+  border-radius: 14px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.15);
+  transition: border-color 0.25s ease;
+}
+
+.project-form-section:hover {
+  border-color: #39342a;
+}
+
+.project-section-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 21px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #2a2a2c;
+}
+
+.project-section-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  color: var(--cp-gold-light);
+  background: linear-gradient(
+    145deg,
+    rgba(201, 168, 106, 0.17),
+    rgba(201, 168, 106, 0.05)
+  );
+  border: 1px solid rgba(201, 168, 106, 0.23);
+  border-radius: 12px;
+}
+
+.project-section-heading h2 {
+  margin: 0;
+  color: #ededed;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.project-section-heading p {
+  margin: 5px 0 0;
+  color: #818186;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FORM GRID
+========================================================= */
+
+.project-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 23px 20px;
+}
+
+.project-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.project-field-full {
+  grid-column: 1 / -1;
+}
+
+.project-field label {
+  color: #c9c9cc;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.project-field label span {
+  color: #e1b96e;
+  margin-right: 3px;
+}
+
+/* =========================================================
+   INPUTS / SELECTS / TEXTAREA
+========================================================= */
+
+.project-field input,
+.project-field select,
+.project-field textarea {
+  display: block;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 14px;
+  color: #ededed;
+  background: #101011;
+  border: 1px solid #343437;
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+  color-scheme: dark;
+}
+
+.project-field input::placeholder,
+.project-field textarea::placeholder {
+  color: #65656a;
+  opacity: 1;
+}
+
+.project-field select {
+  cursor: pointer;
+}
+
+.project-field select option {
+  color: #ededed;
+  background: #19191a;
+}
+
+.project-field textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.9;
+}
+
+.project-field input:hover,
+.project-field select:hover,
+.project-field textarea:hover {
+  border-color: #55504a;
+}
+
+.project-field input:focus,
+.project-field select:focus,
+.project-field textarea:focus {
+  background: #131313;
+  border-color: var(--cp-gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 106, 0.1);
+}
+
+.project-field input:disabled,
+.project-field select:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.project-field small {
+  color: #77777c;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   FINANCIAL PREVIEW
+========================================================= */
+
+.project-financial-preview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 25px;
+  padding: 19px;
+  background: linear-gradient(
+    120deg,
+    #111112,
+    #181715
+  );
+  border: 1px solid #35302a;
+  border-radius: 11px;
+}
+
+.project-financial-preview > div {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.project-financial-preview span {
+  color: #8d8d91;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.project-financial-preview strong {
+  color: var(--cp-gold-light);
+  font-size: 18px;
+  font-weight: 750;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   INFORMATION NOTE
+========================================================= */
+
+.project-form-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  color: #b2a78f;
+  background: rgba(201, 168, 106, 0.055);
+  border: 1px solid rgba(201, 168, 106, 0.19);
+  border-radius: 10px;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.project-form-note svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--cp-gold);
+}
+
+/* =========================================================
+   ALERTS
+========================================================= */
+
+.create-project-alert {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 19px 0;
+  padding: 14px 16px;
+  border-radius: 9px;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.8;
+  animation: cp-alert-in 0.25s ease;
+}
+
+.create-project-alert svg {
+  flex-shrink: 0;
+}
+
+.create-project-alert.error {
+  color: #ffaaaa;
+  background: rgba(160, 45, 45, 0.12);
+  border: 1px solid rgba(220, 80, 80, 0.25);
+}
+
+.create-project-alert.success {
+  color: #a8e4b9;
+  background: rgba(45, 150, 75, 0.1);
+  border: 1px solid rgba(80, 190, 110, 0.25);
+}
+
+@keyframes cp-alert-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.project-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 13px;
+  padding: 5px 0 30px;
+}
+
+.project-cancel-button,
+.project-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-width: 135px;
+  min-height: 46px;
+  padding: 0 23px;
+  border-radius: 9px;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.project-cancel-button {
+  color: #c2c2c5;
+  background: #1a1a1b;
+  border: 1px solid #37373a;
+}
+
+.project-cancel-button:hover {
+  color: #fff;
+  background: #252526;
+  border-color: #656568;
+}
+
+.project-submit-button {
+  color: #17130c;
+  background: linear-gradient(
+    135deg,
+    #e1c58e 0%,
+    #c5a264 100%
+  );
+  border: 1px solid #d7b87d;
+  box-shadow: 0 4px 16px rgba(201, 168, 106, 0.13);
+}
+
+.project-submit-button:hover:not(:disabled) {
+  background: linear-gradient(
+    135deg,
+    #efd5a1 0%,
+    #d1af70 100%
+  );
+  box-shadow: 0 6px 20px rgba(201, 168, 106, 0.2);
+  transform: translateY(-2px);
+}
+
+.project-submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.project-submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* =========================================================
+   LOADING ANIMATION
+========================================================= */
+
+.project-submit-button .spin {
+  animation: cp-spin 1s linear infinite;
+}
+
+@keyframes cp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+.create-project-page ::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+.create-project-page ::-webkit-scrollbar-track {
+  background: #111;
+}
+
+.create-project-page ::-webkit-scrollbar-thumb {
+  background: #3a3730;
+  border-radius: 10px;
+}
+
+.create-project-page ::-webkit-scrollbar-thumb:hover {
+  background: #92794e;
+}
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .create-project-page {
+    padding: 25px 20px;
+  }
+
+  .project-form-section {
+    padding: 23px;
+  }
+
+  .create-project-topbar h1 {
+    font-size: 25px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .create-project-page {
+    padding: 19px 13px;
+  }
+
+  .create-project-topbar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 17px;
+    margin-bottom: 23px;
+  }
+
+  .create-project-topbar h1 {
+    font-size: 22px;
+  }
+
+  .create-project-topbar p {
+    font-size: 11px;
+  }
+
+  .create-project-back {
+    width: 100%;
+  }
+
+  .project-form-section {
+    padding: 19px 14px;
+    border-radius: 11px;
+  }
+
+  .project-section-heading {
+    gap: 11px;
+    padding-bottom: 17px;
+    margin-bottom: 19px;
+  }
+
+  .project-section-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-section-heading h2 {
+    font-size: 14px;
+  }
+
+  .project-section-heading p {
+    font-size: 10px;
+  }
+
+  .project-form-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 19px;
+  }
+
+  .project-field-full {
+    grid-column: auto;
+  }
+
+  .project-field input,
+  .project-field select,
+  .project-field textarea {
+    font-size: 12px;
+  }
+
+  .project-financial-preview {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .project-financial-preview strong {
+    font-size: 16px;
+  }
+
+  .project-form-note {
+    padding: 13px;
+    font-size: 10px;
+  }
+
+  .project-form-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .project-cancel-button,
+  .project-submit-button {
+    width: 100%;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+  .create-project-page {
+    padding: 15px 10px;
+  }
+
+  .project-form-section {
+    padding: 16px 11px;
+  }
+
+  .create-project-topbar h1 {
+    font-size: 20px;
+  }
+
+  .project-section-heading h2 {
+    font-size: 13px;
+  }
+}
